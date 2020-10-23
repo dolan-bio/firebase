@@ -3,11 +3,11 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ThreeDComponent } from './three-d/three-d.component';
+import { ThreeDModule } from './three-d/three-d.module';
 
 @NgModule({
-  declarations: [AppComponent, ThreeDComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  declarations: [AppComponent],
+  imports: [BrowserModule, AppRoutingModule, ThreeDModule],
   providers: [],
   bootstrap: [AppComponent],
 })
