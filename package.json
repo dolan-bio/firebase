@@ -8,7 +8,9 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:prod": "NODE_ENV=production ng build --prod"
+    "build:prod": "NODE_ENV=production ng build --prod",
+    "prettier": "prettier -l \"src/**/*.{ts,scss,html}\"",
+    "prettier:fix": "npm run prettier -- --write"
   },
   "private": true,
   "dependencies": {
@@ -46,6 +48,7 @@
     "postcss-import": "12.0.1",
     "postcss-loader": "latest",
     "postcss-scss": "latest",
+    "prettier": "^2.1.2",
     "protractor": "~7.0.0",
     "tailwindcss": "latest",
     "ts-node": "~8.3.0",
