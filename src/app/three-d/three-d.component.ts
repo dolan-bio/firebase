@@ -25,7 +25,7 @@ export class ThreeDComponent implements OnInit {
         const convertedTop = this.tiltCalculator(top);
         this.stage.tilt(convertedTop);
       },
-      false
+      false,
     );
   }
 

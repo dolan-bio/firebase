@@ -8,9 +8,8 @@ describe('ThreeDComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ThreeDComponent ]
-    })
-    .compileComponents();
+      declarations: [ThreeDComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

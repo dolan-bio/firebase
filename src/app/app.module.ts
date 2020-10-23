@@ -6,15 +6,9 @@ import { AppComponent } from './app.component';
 import { ThreeDComponent } from './three-d/three-d.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ThreeDComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  declarations: [AppComponent, ThreeDComponent],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
