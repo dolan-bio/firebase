@@ -1,5 +1,14 @@
 {
   "projects": {
     "prod": "dolan-bio-75480"
+  },
+  "targets": {
+    "dolan-bio-75480": {
+      "hosting": {
+        "front-end": [
+          "dolan-bio-75480"
+        ]
+      }
+    }
   }
 }
