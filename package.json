@@ -9,6 +9,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "build:prod": "NODE_ENV=production ng build --prod",
+    "sass-lint": "sass-lint \"src/**/*.scss\" -v -q",
     "prettier": "prettier -l \"src/**/*.{ts,scss,html}\"",
     "prettier:fix": "npm run prettier -- --write"
   },
@@ -51,6 +52,7 @@
     "postcss-scss": "latest",
     "prettier": "^2.1.2",
     "protractor": "~7.0.0",
+    "sass-lint": "^1.13.1",
     "tailwindcss": "latest",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
