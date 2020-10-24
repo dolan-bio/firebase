@@ -57,7 +57,7 @@ jobs:
         uses: actions/download-artifact@master
         with:
           name: dist
-          path: dist
+          path: functions/dist
       - name: Install Dependencies
         run: |
             cd functions
