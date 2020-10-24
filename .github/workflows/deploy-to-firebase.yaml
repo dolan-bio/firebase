@@ -23,8 +23,27 @@ jobs:
         with:
           name: dist
           path: dist
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@master
+      - name: Install Dependencies
+        run: |
+            npm config set "@fortawesome:registry" https://npm.fontawesome.com/
+            npm config set '//npm.fontawesome.com/:_authToken' "${{ secrets.FONTAWESOME_NPM_AUTH_TOKEN }}"
+            npm ci
+      - name: Lint
+        run: npm run lint
+      - name: Sass Lint
+        run: npm run sass-lint
+      - name: Prettier
+        run: npm run prettier
+      - name: Test
+        run: npm run test
   deploy:
-    name: Deploy Browser to Firebase Hosting
+    name: Deploy Browser
     needs: build
     runs-on: ubuntu-latest
     steps:
@@ -42,7 +61,7 @@ jobs:
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
   functions:
-    name: Deploy Functions to Firebase
+    name: Deploy Functions
     needs: build
     runs-on: ubuntu-latest
     steps:
