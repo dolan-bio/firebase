@@ -64,6 +64,7 @@ jobs:
             npm ci
       - name: Build
         run: |
+            cd functions
             npm run build
       - name: Deploy to Firebase
         run: |
