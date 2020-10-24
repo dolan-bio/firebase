@@ -48,19 +48,15 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@master
-      - name: Download Artifact
-        uses: actions/download-artifact@master
-        with:
-          name: dist
-          path: functions/dist
       - name: Install Dependencies
         run: |
             cd functions
             npm ci
-      - name: Build
-        run: |
-            cd functions
-            npm run build
+      - name: Download Artifact
+        uses: actions/download-artifact@master
+        with:
+          name: dist
+          path: functions/lib/dist
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
