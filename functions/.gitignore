@@ -11,5 +11,5 @@ typings/
 # Node.js dependency directory
 node_modules/
 
-# Angular build files from cp-angular
+# Angular build files
 dist/
