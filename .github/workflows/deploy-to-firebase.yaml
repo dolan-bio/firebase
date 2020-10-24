@@ -41,7 +41,7 @@ jobs:
       - name: Prettier
         run: npm run prettier
       - name: Test
-        run: npm run test
+        run: npm run test -- --configuration=ci
   deploy:
     name: Deploy Browser
     needs: build
