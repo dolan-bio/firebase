@@ -44,7 +44,7 @@ jobs:
         run: npm run test -- --configuration=ci
   deploy:
     name: Deploy Browser
-    needs: build
+    needs: [test, build]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
@@ -62,7 +62,7 @@ jobs:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
   functions:
     name: Deploy Functions
-    needs: build
+    needs: [test, build]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
