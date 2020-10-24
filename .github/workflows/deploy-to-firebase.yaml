@@ -17,7 +17,7 @@ jobs:
             npm config set '//npm.fontawesome.com/:_authToken' "${{ secrets.FONTAWESOME_NPM_AUTH_TOKEN }}"
             npm ci
       - name: Build
-        run: npm run build:prod
+        run: npm run build:ssr
       - name: Archive Production Artifact
         uses: actions/upload-artifact@master
         with:
@@ -41,6 +41,8 @@ jobs:
             npm config set '//npm.fontawesome.com/:_authToken' "${{ secrets.FONTAWESOME_NPM_AUTH_TOKEN }}"
             npm ci
       - name: Deploy to Firebase
-        run: npm run deploy
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only hosting
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}

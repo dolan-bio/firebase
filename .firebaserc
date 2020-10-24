@@ -1,6 +1,6 @@
 {
   "projects": {
-    "prod": "dolan-bio-75480"
+    "default": "dolan-bio-75480"
   },
   "targets": {
     "dolan-bio-75480": {

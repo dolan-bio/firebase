@@ -2,7 +2,7 @@
   "hosting": [
     {
       "target": "front-end",
-      "public": "dist\\front-end\\dist\\front-end\\browser",
+      "public": "dist/front-end/browser",
       "ignore": [
         "**/.*"
       ],
@@ -26,6 +26,15 @@
     }
   ],
   "emulators": {
+    "functions": {
+      "port": 5001
+    },
+    "firestore": {
+      "port": 8080
+    },
+    "database": {
+      "port": 9000
+    },
     "hosting": {
       "port": 5000
     },
@@ -34,6 +43,9 @@
     }
   },
   "functions": {
-    "source": "dist/front-end"
+    "predeploy": [
+      "npm --prefix \"$RESOURCE_DIR\" run lint",
+      "npm --prefix \"$RESOURCE_DIR\" run build"
+    ]
   }
 }

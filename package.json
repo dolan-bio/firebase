@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng deploy --token=$FIREBASE_TOKEN",
+    "deploy": "ng deploy",
     "build:prod": "NODE_ENV=production ng build --prod",
     "sass-lint": "sass-lint \"src/**/*.scss\" -v -q",
     "prettier": "prettier -l \"src/**/*.{ts,scss,html}\"",
