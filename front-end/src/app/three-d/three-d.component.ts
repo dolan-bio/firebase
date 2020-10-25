@@ -19,10 +19,9 @@ export class ThreeDComponent implements OnInit {
     this.stage.setSize(document.body.clientWidth, window.innerHeight);
 
     window.addEventListener(
-      'scroll',
-      () => {
-        const top = window.scrollY;
-        const convertedTop = this.tiltCalculator(top);
+      'mousemove',
+      (e) => {
+        const convertedTop = this.tiltCalculator(e.screenY);
         this.stage.tilt(convertedTop);
       },
       false,
@@ -31,6 +30,6 @@ export class ThreeDComponent implements OnInit {
 
   private tiltCalculator(screenPosY: number): number {
     const scaledY = screenPosY / 170;
-    return 70 * Math.exp(-scaledY) + 0.1;
+    return 10 * scaledY;
   }
 }
