@@ -3,13 +3,15 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { MockComponent } from 'ng-mocks';
 
 import { AppComponent } from './app.component';
+import { GuestbookEntryComponent } from './guestbook-entry/guestbook-entry.component';
+import { SocialsComponent } from './socials/socials.component';
 import { ThreeDComponent } from './three-d/three-d.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [RouterTestingModule],
-      declarations: [AppComponent, MockComponent(ThreeDComponent)],
+      declarations: [AppComponent, MockComponent(ThreeDComponent), MockComponent(SocialsComponent), MockComponent(GuestbookEntryComponent)],
     }).compileComponents();
   });
 
