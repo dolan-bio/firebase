@@ -4,10 +4,11 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ThreeDModule } from './three-d/three-d.module';
+import { SocialsModule } from './socials/socials.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule.withServerTransition({ appId: 'serverApp' }), AppRoutingModule, ThreeDModule],
+  imports: [BrowserModule.withServerTransition({ appId: 'serverApp' }), AppRoutingModule, ThreeDModule, SocialsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
