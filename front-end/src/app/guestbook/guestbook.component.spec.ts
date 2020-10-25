@@ -17,7 +17,7 @@ describe('GuestbookComponent', () => {
           useValue: {
             collection: () => {
               return {
-                valueChanges: () => EMPTY,
+                stateChanges: () => EMPTY,
               };
             },
           },

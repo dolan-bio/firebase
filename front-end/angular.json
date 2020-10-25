@@ -32,7 +32,11 @@
               "node_modules/@fortawesome/fontawesome-pro/css/all.min.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/pixi.js/dist/pixi.js",
+              "node_modules/p2/build/p2.js",
+              "node_modules/phaser-ce/build/phaser.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -98,7 +102,11 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/pixi.js/dist/pixi.js",
+              "node_modules/p2/build/p2.js",
+              "node_modules/phaser-ce/build/phaser.js"
+            ]
           },
           "configurations": {
             "ci": {

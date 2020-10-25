@@ -31,13 +31,17 @@
     "@angular/platform-server": "~10.2.0",
     "@angular/router": "~10.2.0",
     "@dolan-bio/3d-scene": "https://github.com/dolan-bio/ThreeD-Scene.git",
+    "@dolan-bio/water-skills": "https://github.com/dolan-bio/Water-Skills.git",
     "@fortawesome/fontawesome-pro": "^5.15.1",
     "@nguniversal/express-engine": "^10.1.0",
     "express": "^4.15.2",
+    "firebase": "^7.13.1",
+    "p2": "^0.7.1",
+    "phaser-ce": "2.8.3",
+    "pixi.js": "^5.3.3",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
-    "zone.js": "~0.10.2",
-    "firebase": "^7.13.1"
+    "zone.js": "~0.10.2"
   },
   "devDependencies": {
     "@angular-devkit/architect": ">= 0.900 < 0.1100",

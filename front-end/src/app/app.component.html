@@ -1,11 +1,11 @@
 <app-three-d></app-three-d>
 
-<div class="absolute bottom-0 sm:mb-64 mb-24 w-full flex justify-center items-center flex-col">
-  <app-guestbook-entry class="m-8"></app-guestbook-entry>
+<app-guestbook class="absolute bottom-0 w-full h-full"></app-guestbook>
 
-  <app-socials></app-socials>
+<div class="absolute bottom-0 sm:mb-64 mb-24 w-full flex justify-center items-center flex-col pointer-events-none">
+  <app-guestbook-entry class="m-8 pointer-events-auto"></app-guestbook-entry>
+
+  <app-socials class="pointer-events-auto"></app-socials>
 </div>
-
-<app-guestbook></app-guestbook>
 
 <img src="assets/logo.png" class="fixed top-0 m-8 sm:m-16" />
