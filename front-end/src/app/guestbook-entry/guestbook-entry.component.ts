@@ -7,7 +7,7 @@ import 'firebase/firestore';
 const largeWordValidator = (control: AbstractControl): { [key: string]: boolean } | null => {
   const value = control.value as string;
 
-  if (value === undefined) {
+  if (!value) {
     return null;
   }
 
