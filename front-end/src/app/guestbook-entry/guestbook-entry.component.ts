@@ -37,6 +37,23 @@ const largeWordValidator = (control: AbstractControl): { [key: string]: boolean 
 
   return null;
 };
+
+const spamValidator = (control: AbstractControl): { [key: string]: boolean } | null => {
+  const value = control.value as string;
+
+  if (!value) {
+    return null;
+  }
+
+  const count = parseFloat(localStorage.getItem('comment-count') ?? '0');
+
+  if (count > 10) {
+    return { spam: true };
+  }
+
+  return null;
+};
+
 @Component({
   selector: 'app-guestbook-entry',
   templateUrl: './guestbook-entry.component.html',
@@ -47,7 +64,7 @@ export class GuestbookEntryComponent {
 
   constructor(private readonly firestore: AngularFirestore, formBuilder: FormBuilder) {
     this.guestbookForm = formBuilder.group({
-      message: ['', Validators.compose([Validators.required, largeWordValidator, profanityValidator])],
+      message: ['', Validators.compose([Validators.required, largeWordValidator, profanityValidator, spamValidator])],
     });
   }
 
@@ -55,6 +72,8 @@ export class GuestbookEntryComponent {
     if (this.guestbookForm.invalid) {
       return;
     }
+
+    localStorage.setItem('comment-count', (parseFloat(localStorage.getItem('comment-count') ?? '0') + 1).toString());
 
     this.firestore.collection('guestbook').add({
       message: this.guestbookForm.get('message').value.substring(0, 100),
