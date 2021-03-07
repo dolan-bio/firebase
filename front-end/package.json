@@ -34,6 +34,8 @@
     "@dolan-bio/water-skills": "https://github.com/dolan-bio/Water-Skills.git",
     "@fortawesome/fontawesome-pro": "^5.15.1",
     "@nguniversal/express-engine": "^10.1.0",
+    "@types/bad-words": "^3.0.0",
+    "bad-words": "^3.0.4",
     "express": "^4.15.2",
     "firebase": "^7.13.1",
     "p2": "^0.7.1",

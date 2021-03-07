@@ -1,8 +1,24 @@
 import { Component } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
-import * as firebase from 'firebase/app';
-import 'firebase/firestore';
+import firebase from 'firebase/app';
+import Filter from 'bad-words';
+
+const filter = new Filter();
+
+const profanityValidator = (control: AbstractControl): { [key: string]: boolean } | null => {
+  const value = control.value as string;
+
+  if (!value) {
+    return null;
+  }
+
+  if (filter.isProfane(value)) {
+    return { profanity: true };
+  }
+
+  return null;
+};
 
 const largeWordValidator = (control: AbstractControl): { [key: string]: boolean } | null => {
   const value = control.value as string;
@@ -31,7 +47,7 @@ export class GuestbookEntryComponent {
 
   constructor(private readonly firestore: AngularFirestore, formBuilder: FormBuilder) {
     this.guestbookForm = formBuilder.group({
-      message: ['', Validators.compose([Validators.required, largeWordValidator])],
+      message: ['', Validators.compose([Validators.required, largeWordValidator, profanityValidator])],
     });
   }
 
