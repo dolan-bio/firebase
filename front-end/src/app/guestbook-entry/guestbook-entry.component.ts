@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, Validators } from '@angular/forms';
 import firebase from 'firebase/app';
 import Filter from 'bad-words';
 
 const filter = new Filter();
 
-const profanityValidator = (control: AbstractControl): { [key: string]: boolean } | null => {
+const profanityValidator = (control: AbstractControl): ValidationErrors | null => {
   const value = control.value as string;
 
   if (!value) {
@@ -20,7 +20,7 @@ const profanityValidator = (control: AbstractControl): { [key: string]: boolean 
   return null;
 };
 
-const largeWordValidator = (control: AbstractControl): { [key: string]: boolean } | null => {
+const largeWordValidator = (control: AbstractControl): ValidationErrors | null => {
   const value = control.value as string;
 
   if (!value) {
@@ -38,7 +38,7 @@ const largeWordValidator = (control: AbstractControl): { [key: string]: boolean 
   return null;
 };
 
-const spamValidator = (control: AbstractControl): { [key: string]: boolean } | null => {
+const spamValidator = (control: AbstractControl): ValidationErrors | null => {
   const value = control.value as string;
 
   if (!value) {
