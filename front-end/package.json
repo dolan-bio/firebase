@@ -33,7 +33,7 @@
     "@dolan-bio/3d-scene": "https://github.com/dolan-bio/ThreeD-Scene.git",
     "@dolan-bio/water-skills": "https://github.com/dolan-bio/Water-Skills.git",
     "@fortawesome/fontawesome-pro": "^5.15.1",
-    "@nguniversal/express-engine": "^10.1.0",
+    "@nguniversal/express-engine": "^11.2.1",
     "@types/bad-words": "^3.0.0",
     "bad-words": "^3.0.4",
     "express": "^4.15.2",
