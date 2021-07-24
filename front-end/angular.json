@@ -30,11 +30,6 @@
             "styles": [
               "node_modules/@fortawesome/fontawesome-pro/css/all.min.css",
               "src/styles.scss"
-            ],
-            "scripts": [
-              "node_modules/pixi.js/dist/pixi.js",
-              "node_modules/p2/build/p2.js",
-              "node_modules/phaser-ce/build/phaser.js"
             ]
           },
           "configurations": {
@@ -98,11 +93,6 @@
             ],
             "styles": [
               "src/styles.scss"
-            ],
-            "scripts": [
-              "node_modules/pixi.js/dist/pixi.js",
-              "node_modules/p2/build/p2.js",
-              "node_modules/phaser-ce/build/phaser.js"
             ]
           },
           "configurations": {
@@ -159,10 +149,7 @@
               "@firebase/storage",
               "@firebase/performance",
               "@firebase/remote-config",
-              "@firebase/util",
-              "phaser-ce",
-              "pixi.js",
-              "p2"
+              "@firebase/util"
             ]
           },
           "configurations": {
